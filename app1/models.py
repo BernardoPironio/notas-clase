@@ -5,6 +5,7 @@ class Entrenadores(models.Model):
     apellido=models.CharField(max_length=50)
     lancha=models.IntegerField()
     club=models.CharField(max_length=5)
+   
     
 class Timoneles(models.Model):
     nombre=models.CharField(max_length=50)
