@@ -8,3 +8,15 @@
 {% block titulo %}
 <h1 class="mb-5">Tripulantes</h1>
 {% endblock %}
+
+{% block formulario %}
+<h3>Inscripcion Tripulantes</h3>
+
+<form action="{% url 'tripulantes' %}" method="POST"> {% csrf_token %}
+    <table>
+        {{ form.as_table }}
+    </table>
+    <input type="submit" value="Inscribir Tripulante">
+</from>
+
+{% endblock %}
