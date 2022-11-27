@@ -57,6 +57,13 @@ def tripulantes(request):
         formulario=TripulantesF()
     return render(request, 'app1/tripulantes.html', {'form':formulario})
 
+def busquedaentrenadores(request):
+    return render(request, 'app1/busquedaentrenadores.html')
 
-
-
+def buscar(request):
+    if request.GET['lancha']:
+        lancha=request.GET['lancha']
+        entrenadores=Entrenadores.objects.filter(lancha__icontains=lancha)
+        return render(request, 'app1/resultadosbusqueda.html',{'entrenadores':entrenadores})
+    else:
+        return render(request, 'app1/busquedaentrenadores.html' , {'mensaje':'No ingresaste un numero de lancha'})

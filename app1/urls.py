@@ -7,4 +7,6 @@ urlpatterns=[
     path('entrenadores/', entrenadores, name='entrenadores'),
     path('timoneles/', timoneles, name='timoneles'),
     path('tripulantes/', tripulantes, name='tripulantes'),
+    path('busquedaentrenadores/', busquedaentrenadores, name='busquedaentrenadores'),
+    path('buscar/', buscar,name='buscar'),
 ]

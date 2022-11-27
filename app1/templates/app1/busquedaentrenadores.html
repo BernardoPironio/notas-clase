@@ -1,0 +1,20 @@
+{% extends 'app1/padre.html' %}
+{% load static %}
+
+{% block nombre_pagina %}
+<title>Busqueda Entrenadores</title>
+{% endblock %}
+
+{% block titulo %}
+<h1 class="mb-5">Busqueda Entrenadores</h1>
+{% endblock %}
+
+{% block busqueda %}
+<h3>Busqueda Entrenadores</h3>
+<form action="{% url 'buscar' %}">
+    <input type="number" name="lancha" id="lancha">
+    <input type="submit" value="buscar entrenador">
+
+
+</form>
+{% endblock %}

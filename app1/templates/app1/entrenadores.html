@@ -9,7 +9,7 @@
 <h1 class="mb-5">Entrenadores</h1>
 {% endblock %}
 
-{% block formulario %}
+{% block inscripcion %}
 <h3>Inscripcion Entrenadores</h3>
 
 <form action="{% url 'entrenadores' %}" method="POST"> {% csrf_token %}
@@ -20,3 +20,10 @@
 </from>
 
 {% endblock %}
+
+{% block busqueda %}
+<h3>Buscar Entrenador</h3>
+<a class="btn btn-primary" href={% url 'busquedaentrenadores' %}>Ir a buscar entrenador</a>
+<p class="lead mb-0">Se buscara el entrenador segun su numero de lancha, por favor ingresar el mismo</p>
+{% endblock%}
+

@@ -1,0 +1,25 @@
+{% extends 'app1/padre.html' %}
+{% load static %}
+
+{% block nombre_pagina %}
+<title>Resultado de busqueda</title>
+{% endblock %}
+
+{% block titulo %}
+<h1 class="mb-5">Resultado de la Busqueda</h1>
+{% endblock %}
+
+{% block busqueda %}
+<h3>Entrenadores encontrados:</h3>
+{% if entrenadores %}
+    <ul>
+        {% for entrenador in entrenadores %}
+            <li><p>{{ entrenador.nombre }} {{ entrenador.apellido }} ({{ entrenador.lancha }})</p></li>
+        {% endfor %}
+    </ul>
+{%else%}
+<p>No se encontro ese entrenador</p>
+{% endif %}
+
+
+{% endblock %}
