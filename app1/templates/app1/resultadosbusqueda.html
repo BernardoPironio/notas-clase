@@ -17,8 +17,19 @@
             <li><p>{{ entrenador.nombre }} {{ entrenador.apellido }} ({{ entrenador.lancha }})</p></li>
         {% endfor %}
     </ul>
-{%else%}
+{% else %}
 <p>No se encontro ese entrenador</p>
+{% endif %}
+
+<h3>Timoneles encontrados:</h3>
+{% if timoneles %}
+    <ul>
+        {% for timonel in timoneles %}
+            <li><p>{{ timonel.nombre }} {{ timonel.apellido }} ({{ timonel.lancha }})</p></li>
+        {% endfor %}
+    </ul>
+{% else %}
+<p>No se encontro ese timonel</p>
 {% endif %}
 
 

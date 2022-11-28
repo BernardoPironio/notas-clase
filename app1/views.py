@@ -67,3 +67,14 @@ def buscar(request):
         return render(request, 'app1/resultadosbusqueda.html',{'entrenadores':entrenadores})
     else:
         return render(request, 'app1/busquedaentrenadores.html' , {'mensaje':'No ingresaste un numero de lancha'})
+
+def busquedatimoneles(request):
+    return render(request, 'app1/busquedatimoneles.html')
+
+def buscartimoneles(request):
+    if request.GET['numero_vela']:
+        numero_vela=request.GET['numero_vela']
+        timoneles=Timoneles.objects.filter(numero_vela__icontains=numero_vela)
+        return render(request, 'app1/resultadosbusqueda.html', {'timoneles':timoneles})
+    else:
+        return render(request, 'app1/busquedatimoneles.html', {'mensaje':'No ingresaste un numero de vela'})

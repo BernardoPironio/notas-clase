@@ -9,4 +9,5 @@ urlpatterns=[
     path('tripulantes/', tripulantes, name='tripulantes'),
     path('busquedaentrenadores/', busquedaentrenadores, name='busquedaentrenadores'),
     path('buscar/', buscar,name='buscar'),
+    path('busquedatimoneles/', busquedatimoneles,name='busquedatimoneles'),
 ]

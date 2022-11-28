@@ -20,3 +20,9 @@
 </from>
 
 {% endblock %}
+
+{% block busqueda %}
+<h3>Buscar Timoneles</h3>
+<a class="btn btn-primary" href={% url 'busquedatimoneles' %}>Ir a buscar timonel</a>
+<p class="lead mb-0">Se buscara el timonel segun su numero de vela, por favor ingresar el mismo</p>
+{% endblock%}
